@@ -1,0 +1,8 @@
+hg38_references/
+work/
+.nextflow*
+slurm/
+results_test/xengsort/xengsort_index.hash
+results_test/references/
+raw_data/
+null/

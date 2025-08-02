@@ -1,0 +1,33 @@
+
+# Xengsort classify [2025-08-02 09:22:41]
+
+- (c) 2019-2023 by Sven Rahmann, Jens Zentgraf, Algorithmic Bioinformatics, Saarland University
+- Licensed under the MIT License
+- loading hash table ./xengsort_index [2025-08-02 09:22:41]
+- hash files './xengsort_index.info', './xengsort_index.hash'...
+- time to load './xengsort_index': 45.4 sec
+- Using count based classification mode
+- Processing contiguous 25-mers.
+4
+
+## Classification Statistics
+
+```
+prefix	host	graft	ambiguous	both	neither
+sub118	462	9012	42	308	42
+```
+
+```
+| prefix    | sub118 
+| host      |  462 |  4.68% |
+| graft     | 9012 | 91.34% |
+| ambiguous |   42 |  0.43% |
+| both      |  308 |  3.12% |
+| neither   |   42 |  0.43% |
+```
+
+## Running time statistics
+
+- Running time: 48.3 sec
+- Running time: 0.80 min
+- Done. [2025-08-02 09:23:30]

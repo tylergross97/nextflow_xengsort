@@ -1,0 +1,3 @@
+sample,fastq1,fastq2
+sub118,tests/data/sub_118_S11_R1_001.fastq.gz,tests/data/sub_118_S11_R2_001.fastq.gz
+sub119,tests/data/sub_119_S12_R1_001.fastq.gz,tests/data/sub_119_S12_R2_001.fastq.gz
