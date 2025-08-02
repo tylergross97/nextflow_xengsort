@@ -6,3 +6,6 @@ results_test/xengsort/xengsort_index.hash
 results_test/references/
 raw_data/
 null/
+run.sh
+test.sh
+
