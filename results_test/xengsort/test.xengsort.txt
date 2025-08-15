@@ -1,0 +1,2 @@
+sample_id	human_reads	mouse_reads	ambiguous_reads	total_reads
+test	1000	500	50	1550

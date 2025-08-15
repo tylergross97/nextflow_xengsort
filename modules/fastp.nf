@@ -20,4 +20,15 @@ process FASTP {
         -j ${meta.sample}_fastp.json \
         -h ${meta.sample}_fastp.html
 	"""
+
+	 stub:
+    """
+    # Create mock trimmed FASTQ files
+    touch ${meta.sample}_trimmed_1.fastq.gz
+    touch ${meta.sample}_trimmed_2.fastq.gz
+    
+    # Create mock fastp reports
+    echo '{"summary": {"before_filtering": {"total_reads": 1000}}}' > ${meta.sample}_fastp.json
+    echo '<html><body>Mock FASTP Report</body></html>' > ${meta.sample}_fastp.html
+    """
 }

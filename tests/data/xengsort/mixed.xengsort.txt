@@ -1,0 +1,2 @@
+prefix	host	graft	ambiguous	both	neither
+mixed	400	400	100	50	50

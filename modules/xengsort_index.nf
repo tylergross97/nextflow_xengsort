@@ -18,4 +18,13 @@ process XENGSORT_INDEX {
         -n 4500000000 \\
         -k 25
      """
+
+    // Add a stub block for minimal test
+    stub:
+    """
+    # Create tiny synthetic index files for testing
+    touch xengsort_index.kmer
+    touch xengsort_index.info
+    echo "minimal index for testing" > xengsort_index.info
+    """
 }

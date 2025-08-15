@@ -1,0 +1,29 @@
+nextflow_process {
+
+    name "Test Process XENGSORT_SUMMARY"
+    script "modules/xengsort_summary.nf"
+    process "XENGSORT_SUMMARY"
+
+    test("Should run without failures") {
+
+        when {
+            process {
+                """
+                // Create mock classification files
+                def classification_files = [
+                    file("${projectDir}/tests/data/xengsort/human.xengsort.txt"),
+                    file("${projectDir}/tests/data/xengsort/mouse.xengsort.txt")
+                ]
+                
+                input[0] = classification_files
+                """
+            }
+        }
+
+        then {
+            assert process.success
+        }
+
+    }
+
+}

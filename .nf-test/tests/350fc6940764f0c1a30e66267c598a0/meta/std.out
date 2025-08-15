@@ -1,0 +1,6 @@
+N E X T F L O W  ~  version 25.04.6
+Launching `/Users/tylergross/Desktop/nextflow_xengsort/.nf-test-350fc6940764f0c1a30e66267c598a0.nf` [trusting_roentgen] DSL2 - revision: 037b4849a4
+WARN: There's no process matching config selector: XENGSORT_CLASSIFY
+WARN: Task runtime metrics are not reported when using macOS without a container engine
+[e8/e2a5f4] Submitted process > XENGSORT_SUMMARY
+WARN: Process `XENGSORT_SUMMARY` publishDir path contains a variable with a null value

@@ -1,0 +1,5 @@
+N E X T F L O W  ~  version 25.04.6
+Launching `/Users/tylergross/Desktop/nextflow_xengsort/.nf-test-20a45d51a4419cf721c43c3795bdab28.nf` [kickass_ritchie] DSL2 - revision: 0754bbc467
+WARN: Task runtime metrics are not reported when using macOS without a container engine
+[c7/1480f7] Submitted process > XENGSORT_INDEX
+WARN: Process `XENGSORT_INDEX` publishDir path contains a variable with a null value

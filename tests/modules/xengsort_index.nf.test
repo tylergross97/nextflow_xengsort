@@ -1,0 +1,25 @@
+nextflow_process {
+
+    name "Test Process XENGSORT_INDEX"
+    script "modules/xengsort_index.nf"
+    process "XENGSORT_INDEX"
+    options "-stub"
+
+    test("Should run without failures") {
+
+        when {
+            process {
+                """
+                input[0] = file("tests/data/human.fa")
+                input[1] = file("tests/data/mouse.fa")
+                """
+            }
+        }
+
+        then {
+            assert process.success
+        }
+
+    }
+
+}

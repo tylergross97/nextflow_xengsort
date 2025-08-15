@@ -1,0 +1,31 @@
+nextflow_process {
+
+    name "Test Process FASTP"
+    script "modules/fastp.nf"
+    process "FASTP"
+
+    test("Should run without failures for one sample") {
+
+        when {
+            process {
+                """
+                // Create the input channel that FASTP expects
+                def meta = [ sample: "test_sample" ]
+                def reads = [
+                    file("${projectDir}/tests/data/xengsort/mixed_R1.fastq.gz"),
+                    file("${projectDir}/tests/data/xengsort/mixed_R2.fastq.gz")
+                ]
+                
+                input[0] = tuple(meta, reads)
+                """
+            }
+        }
+
+        then {
+            println("Process output: ${process.out}")
+            assert process.success
+        }
+
+    }
+
+}

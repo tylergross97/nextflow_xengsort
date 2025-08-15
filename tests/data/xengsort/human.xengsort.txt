@@ -1,0 +1,2 @@
+prefix	host	graft	ambiguous	both	neither
+human	100	800	50	25	25

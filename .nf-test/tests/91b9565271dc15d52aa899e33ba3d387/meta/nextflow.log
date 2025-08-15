@@ -1,0 +1,82 @@
+Aug-15 13:57:56.783 [main] DEBUG nextflow.cli.Launcher - $> nextflow -log /Users/tylergross/Desktop/nextflow_xengsort/.nf-test/tests/91b9565271dc15d52aa899e33ba3d387/meta/nextflow.log run /Users/tylergross/Desktop/nextflow_xengsort/.nf-test-91b9565271dc15d52aa899e33ba3d387.nf -c /Users/tylergross/Desktop/nextflow_xengsort/nextflow.config -c /Users/tylergross/Desktop/nextflow_xengsort/tests/nextflow.config -params-file /Users/tylergross/Desktop/nextflow_xengsort/.nf-test/tests/91b9565271dc15d52aa899e33ba3d387/meta/params.json -ansi-log false -profile docker -with-trace /Users/tylergross/Desktop/nextflow_xengsort/.nf-test/tests/91b9565271dc15d52aa899e33ba3d387/meta/trace.csv -w /Users/tylergross/Desktop/nextflow_xengsort/.nf-test/tests/91b9565271dc15d52aa899e33ba3d387/work -stub
+Aug-15 13:57:56.903 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.6
+Aug-15 13:57:56.962 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/Users/tylergross/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.1,nf-k8s@1.0.0,nf-tower@1.11.4,nf-wave@1.12.1
+Aug-15 13:57:57.001 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Aug-15 13:57:57.003 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Aug-15 13:57:57.008 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Aug-15 13:57:57.025 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Aug-15 13:57:57.059 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /Users/tylergross/Desktop/nextflow_xengsort/nextflow.config
+Aug-15 13:57:57.068 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /Users/tylergross/Desktop/nextflow_xengsort/nextflow.config
+Aug-15 13:57:57.068 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /Users/tylergross/Desktop/nextflow_xengsort/tests/nextflow.config
+Aug-15 13:57:57.070 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/tylergross/Desktop/nextflow_xengsort/nextflow.config
+Aug-15 13:57:57.071 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/tylergross/Desktop/nextflow_xengsort/nextflow.config
+Aug-15 13:57:57.071 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/tylergross/Desktop/nextflow_xengsort/tests/nextflow.config
+Aug-15 13:57:57.116 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /Users/tylergross/.nextflow/secrets/store.json
+Aug-15 13:57:57.122 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@4e904fd5] - activable => nextflow.secret.LocalSecretsProvider@4e904fd5
+Aug-15 13:57:57.154 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker`
+Aug-15 13:57:57.877 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker`
+Aug-15 13:57:57.897 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `docker`
+Aug-15 13:57:57.933 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [test, singularity, docker]
+Aug-15 13:57:57.975 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+Aug-15 13:57:58.003 [main] INFO  nextflow.cli.CmdRun - Launching `/Users/tylergross/Desktop/nextflow_xengsort/.nf-test-91b9565271dc15d52aa899e33ba3d387.nf` [focused_jang] DSL2 - revision: 9b1cc15b39
+Aug-15 13:57:58.005 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Aug-15 13:57:58.006 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Aug-15 13:57:58.111 [main] DEBUG nextflow.Session - Session UUID: 20b53719-eaa6-4ab4-9a59-dfbbbe1c2b66
+Aug-15 13:57:58.112 [main] DEBUG nextflow.Session - Run name: focused_jang
+Aug-15 13:57:58.112 [main] DEBUG nextflow.Session - Executor pool size: 8
+Aug-15 13:57:58.126 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Aug-15 13:57:58.135 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Aug-15 13:57:58.164 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.04.6 build 5954
+  Created: 01-07-2025 11:27 UTC (07:27 EDT)
+  System: Mac OS X 13.7.2
+  Runtime: Groovy 4.0.26 on OpenJDK 64-Bit Server VM 17.0.10+7
+  Encoding: UTF-8 (UTF-8)
+  Process: 61478@MacBook-Pro-418.local [10.84.172.210]
+  CPUs: 8 - Mem: 16 GB (22.5 MB) - Swap: 8 GB (924.8 MB)
+Aug-15 13:57:58.196 [main] DEBUG nextflow.Session - Work-dir: /Users/tylergross/Desktop/nextflow_xengsort/.nf-test/tests/91b9565271dc15d52aa899e33ba3d387/work [Mac OS X]
+Aug-15 13:57:58.197 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /Users/tylergross/Desktop/nextflow_xengsort/bin
+Aug-15 13:57:58.214 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Aug-15 13:57:58.229 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Aug-15 13:57:58.242 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Aug-15 13:57:58.280 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Aug-15 13:57:58.294 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+Aug-15 13:57:58.399 [main] DEBUG nextflow.Session - Session start
+Aug-15 13:57:58.405 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /Users/tylergross/Desktop/nextflow_xengsort/.nf-test/tests/91b9565271dc15d52aa899e33ba3d387/meta/trace.csv
+Aug-15 13:57:58.866 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Aug-15 13:57:59.390 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:XENGSORT_CLASSIFY` matches process XENGSORT_CLASSIFY
+Aug-15 13:57:59.427 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-15 13:57:59.428 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-15 13:57:59.436 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Aug-15 13:57:59.445 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=16 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Aug-15 13:57:59.449 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Aug-15 13:57:59.493 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'XENGSORT_CLASSIFY': maxForks=0; fair=false; array=0
+Aug-15 13:57:59.642 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: XENGSORT_CLASSIFY
+Aug-15 13:57:59.647 [main] DEBUG nextflow.Session - Igniting dataflow network (1)
+Aug-15 13:57:59.648 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > XENGSORT_CLASSIFY
+Aug-15 13:57:59.649 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_d39a3febf1107599: /Users/tylergross/Desktop/nextflow_xengsort/modules/xengsort_classify.nf
+  Script_c61ecaab57d45687: /Users/tylergross/Desktop/nextflow_xengsort/.nf-test-91b9565271dc15d52aa899e33ba3d387.nf
+Aug-15 13:57:59.649 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Aug-15 13:57:59.649 [main] DEBUG nextflow.Session - Session await
+Aug-15 13:57:59.920 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-15 13:57:59.923 [Task submitter] INFO  nextflow.Session - [3e/ab6c00] Submitted process > XENGSORT_CLASSIFY
+Aug-15 13:58:00.577 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: XENGSORT_CLASSIFY; status: COMPLETED; exit: 0; error: -; workDir: /Users/tylergross/Desktop/nextflow_xengsort/.nf-test/tests/91b9565271dc15d52aa899e33ba3d387/work/3e/ab6c000c4d3e5ba2dc1d1c8b10f3d8]
+Aug-15 13:58:00.578 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Aug-15 13:58:00.736 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Process XENGSORT_CLASSIFY > Skipping output binding because one or more optional files are missing: fileoutparam<1:1>
+Aug-15 13:58:00.737 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Process XENGSORT_CLASSIFY > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Aug-15 13:58:00.737 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Process XENGSORT_CLASSIFY > Skipping output binding because one or more optional files are missing: fileoutparam<3:1>
+Aug-15 13:58:00.737 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Process XENGSORT_CLASSIFY > Skipping output binding because one or more optional files are missing: fileoutparam<4:1>
+Aug-15 13:58:00.738 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Process XENGSORT_CLASSIFY > Skipping output binding because one or more optional files are missing: fileoutparam<5:1>
+Aug-15 13:58:00.757 [TaskFinalizer-1] WARN  nextflow.processor.PublishDir - Process `XENGSORT_CLASSIFY` publishDir path contains a variable with a null value
+Aug-15 13:58:00.765 [TaskFinalizer-1] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Aug-15 13:58:00.787 [main] DEBUG nextflow.Session - Session await > all processes finished
+Aug-15 13:58:00.881 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Aug-15 13:58:00.881 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Aug-15 13:58:00.884 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+Aug-15 13:58:00.885 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+Aug-15 13:58:00.919 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=1; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=46ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=2; peakMemory=2 GB; ]
+Aug-15 13:58:00.919 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+Aug-15 13:58:00.928 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Aug-15 13:58:00.951 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Aug-15 13:58:00.951 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

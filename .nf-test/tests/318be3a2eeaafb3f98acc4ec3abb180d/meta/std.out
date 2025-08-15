@@ -1,0 +1,5 @@
+N E X T F L O W  ~  version 25.04.6
+Launching `/Users/tylergross/Desktop/nextflow_xengsort/.nf-test-318be3a2eeaafb3f98acc4ec3abb180d.nf` [trusting_sanger] DSL2 - revision: 9cfce9300d
+WARN: There's no process matching config selector: XENGSORT_CLASSIFY
+[7f/c9a674] Submitted process > FASTP
+WARN: Process `FASTP` publishDir path contains a variable with a null value

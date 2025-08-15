@@ -1,0 +1,35 @@
+nextflow_process {
+
+    name "Test Process XENGSORT_CLASSIFY"
+    script "modules/xengsort_classify.nf"
+    process "XENGSORT_CLASSIFY"
+    options "-stub"
+
+    test("Should run without failures") {
+
+        when {
+            process {
+                """
+                input[0] = tuple(
+                    [sample: "human"],
+                    [
+                        file("${projectDir}/tests/data/xengsort/human_R1.fastq.gz"),
+                        file("${projectDir}/tests/data/xengsort/human_R2.fastq.gz")
+                    ]
+                )
+                input[1] = [
+                    file("${projectDir}/tests/data/xengsort/xengsort_index.hash"),
+                    file("${projectDir}/tests/data/xengsort/xengsort_index.kmer"),
+                    file("${projectDir}/tests/data/xengsort/xengsort_index.info")
+                ]
+                """
+            }
+        }
+
+        then {
+            assert process.success
+        }
+
+    }
+
+}

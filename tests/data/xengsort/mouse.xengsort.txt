@@ -1,0 +1,2 @@
+prefix	host	graft	ambiguous	both	neither
+mouse	900	50	30	10	10

@@ -1,0 +1,2 @@
+task_id	hash	native_id	name	status	exit	submit	duration	realtime	%cpu	peak_rss	peak_vmem	rchar	wchar
+1	7f/c9a674	60568	FASTP	COMPLETED	0	2025-08-15 13:55:09.020	1.3s	1s	93.7%	214.3 MB	1 GB	67 KB	421.2 KB

@@ -39,4 +39,17 @@ process XENGSORT_CLASSIFY {
         $args > ${prefix}.xengsort.txt
     """
 
+    stub:
+    """
+    # Create mock classification output for testing
+    echo "sample_id\thuman_reads\tmouse_reads\tambiguous_reads\ttotal_reads" > ${meta.sample}.xengsort.txt
+    echo "${meta.sample}\t1000\t500\t50\t1550" >> ${meta.sample}.xengsort.txt
+    
+    # Create mock separated FASTQ files
+    touch ${meta.sample}_human_1.fastq.gz
+    touch ${meta.sample}_human_2.fastq.gz
+    touch ${meta.sample}_mouse_1.fastq.gz
+    touch ${meta.sample}_mouse_2.fastq.gz
+    """
+
 }

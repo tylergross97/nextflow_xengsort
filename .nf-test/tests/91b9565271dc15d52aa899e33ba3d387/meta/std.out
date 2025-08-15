@@ -1,0 +1,4 @@
+N E X T F L O W  ~  version 25.04.6
+Launching `/Users/tylergross/Desktop/nextflow_xengsort/.nf-test-91b9565271dc15d52aa899e33ba3d387.nf` [focused_jang] DSL2 - revision: 9b1cc15b39
+[3e/ab6c00] Submitted process > XENGSORT_CLASSIFY
+WARN: Process `XENGSORT_CLASSIFY` publishDir path contains a variable with a null value
