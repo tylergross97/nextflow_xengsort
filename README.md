@@ -63,6 +63,9 @@ You will find the trimmed, human-only filtered reads in ${outdir_base}/fastp/hum
 
 If you want to explore mouse contamination, refer to ${outdir_base}/xengsort/xengsort_summary.csv, which will contain sample-level contamination information
 
+### Testing
+To test pipeline with a minimal dataset, run pipeline with -profile test
+
 ## Citations
 If you use this pipeline in your work, please cite: [Tyler Gross] (2025). Xengsort Nextflow Pipeline [Computer software]. https://github.com/tylergross97/nextflow_xengsort
 
