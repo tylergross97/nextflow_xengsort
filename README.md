@@ -62,3 +62,12 @@ ls
 You will find the trimmed, human-only filtered reads in ${outdir_base}/fastp/human_trimmed_{1,2}.fastq.gz - these can be then be used as input into pipelines that require uncontaminated reads, such as nf-core/sarek or nf-core/rnaseq
 
 If you want to explore mouse contamination, refer to ${outdir_base}/xengsort/xengsort_summary.csv, which will contain sample-level contamination information
+
+## Citations
+If you use this pipeline in your work, please cite: [Tyler Gross] (2025). Xengsort Nextflow Pipeline [Computer software]. https://github.com/tylergross97/nextflow_xengsort
+
+This pipeline uses the following tools that should be cited independently:
+1. Di Tommaso, P., Chatzou, M., Floden, E. W., Barja, P. P., Palumbo, E., & Notredame, C. (2017). Nextflow enables reproducible computational workflows. Nature biotechnology, 35(4), 316-319.
+2. Chen, S., Zhou, Y., Chen, Y., & Gu, J. (2018). fastp: an ultra-fast all-in-one FASTQ preprocessor. Bioinformatics, 34(17), i884-i890.
+3. Hynds, R. E., Huebner, A., Pearce, D. R., Hill, M. S., Akarca, A. U., Moore, D. A., ... & Swanton, C. (2024). Representation of genomic intratumor heterogeneity in multi-region non-small cell lung cancer patient-derived xenograft models. Nature communications, 15(1), 4653.
+4. Zentgraf, J., & Rahmann, S. (2021). Fast lightweight accurate xenograft sorting. Algorithms for Molecular Biology, 16(1), 2.
