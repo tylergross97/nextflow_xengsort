@@ -3,6 +3,7 @@ nextflow_process {
     name "Test Process FASTP"
     script "modules/fastp.nf"
     process "FASTP"
+    options "-stub"
 
     test("Should run without failures for one sample") {
 
