@@ -27,29 +27,6 @@ This pipeline cleanly separates these reads, providing contamination-free human 
 
 ![Pipeline Workflow](pipeline.svg)
 
-```mermaid
-flowchart TB
-    subgraph " "
-    subgraph params
-    v5["nsg_fasta"]
-    v0["input reads"]
-    v3["hg38_fasta"]
-    end
-    v2([FASTP])
-    v7([XENGSORT_INDEX])
-    v9([XENGSORT_CLASSIFY])
-    v10([XENGSORT_SUMMARY])
-    v14([MULTIQC])
-    v0 --> v2
-    v3 --> v7
-    v5 --> v7
-    v2 --> v9
-    v7 --> v9
-    v9 --> v10
-    v2 --> v14
-    end
-```
-
 ## 🚀 Quick Start
 
 Run the pipeline directly from GitHub (no cloning required):
