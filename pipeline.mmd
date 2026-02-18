@@ -1,0 +1,23 @@
+%%metro title: Xenograft Sorting Pipeline
+%%metro style: dark
+%%metro line: main | Main Processing | #4CAF50
+%%metro line: index | Genome Indexing | #FF9800
+%%metro line: qc | Quality Control | #2196F3
+
+graph LR
+    input[Samplesheet]
+    hg38[hg38 FASTA]
+    nsg[NSG FASTA]
+    fastp[FASTP]
+    xengsort_index[XENGSORT_INDEX]
+    xengsort_classify[XENGSORT_CLASSIFY]
+    xengsort_summary[XENGSORT_SUMMARY]
+    multiqc[MULTIQC]
+
+    input -->|main| fastp
+    hg38 -->|index| xengsort_index
+    nsg -->|index| xengsort_index
+    fastp -->|main| xengsort_classify
+    xengsort_index -->|index| xengsort_classify
+    xengsort_classify -->|main| xengsort_summary
+    fastp -->|qc| multiqc

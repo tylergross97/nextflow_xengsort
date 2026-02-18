@@ -24,6 +24,9 @@ This pipeline cleanly separates these reads, providing contamination-free human 
 - **NSG-optimized**: Compatible with NSG-adapted mouse reference genome
 
 ## Workflow
+
+![Pipeline Workflow](pipeline.svg)
+
 ```mermaid
 flowchart TB
     subgraph " "
