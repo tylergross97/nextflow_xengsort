@@ -6,6 +6,10 @@
 
 A Nextflow DSL2 pipeline for separating human and mouse sequencing reads from Patient-Derived Xenograft (PDX) samples using [Xengsort](https://gitlab.com/genomeinformatics/xengsort) (Zentgraf and Rahmann, 2021).
 
+## Workflow
+
+![Pipeline Workflow](pipeline.svg)
+
 ## 🎯 Overview
 
 When tumor samples from PDX models (human tumors grown in immunocompromised mice) are sequenced, the resulting data contains a mixture of:
@@ -23,9 +27,6 @@ This pipeline cleanly separates these reads, providing contamination-free human 
 - **Production-ready**: Docker and Singularity support for reproducibility
 - **NSG-optimized**: Compatible with NSG-adapted mouse reference genome
 
-## Workflow
-
-![Pipeline Workflow](pipeline.svg)
 
 ## 🚀 Quick Start
 
