@@ -1,3 +1,3 @@
 sample,fastq1,fastq2
-319-R-AH8,test_full/data/full/319-R-AH8_R1.fastq.gz,test_full/data/full/319-R-AH8_R2.fastq.gz
-319-R-AH6T26,test_full/data/full/319-R-AH6T26_R1.fastq.gz,test_full/data/full/319-R-AH6T26_R2.fastq.gz
+319-R-AH8,https://pdmdb.cancer.gov/pdm/111316~319-R~AH8~v2.0.2.51.0~WES.R1.FASTQ.gz,https://pdmdb.cancer.gov/pdm/111316~319-R~AH8~v2.0.2.51.0~WES.R2.FASTQ.gz
+319-R-AH6T26,https://pdmdb.cancer.gov/pdm/111316~319-R~AH6T26~v2.0.2.51.0~WES.R1.FASTQ.gz,https://pdmdb.cancer.gov/pdm/111316~319-R~AH6T26~v2.0.2.51.0~WES.R2.FASTQ.gz
