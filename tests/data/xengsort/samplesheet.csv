@@ -1,4 +1,0 @@
-sample,fastq1,fastq2
-human,tests/data/xengsort/human_R1.fastq.gz,tests/data/xengsort/human_R2.fastq.gz
-mouse,tests/data/xengsort/mouse_R1.fastq.gz,tests/data/xengsort/mouse_R2.fastq.gz
-mixed,tests/data/xengsort/mixed_R1.fastq.gz,tests/data/xengsort/mixed_R2.fastq.gz

@@ -1,0 +1,4 @@
+sample,fastq1,fastq2
+human,test_minimal/data/xengsort/human_R1.fastq.gz,test_minimal/data/xengsort/human_R2.fastq.gz
+mouse,test_minimal/data/xengsort/mouse_R1.fastq.gz,test_minimal/data/xengsort/mouse_R2.fastq.gz
+mixed,test_minimal/data/xengsort/mixed_R1.fastq.gz,test_minimal/data/xengsort/mixed_R2.fastq.gz

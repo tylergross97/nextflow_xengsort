@@ -126,17 +126,38 @@ The clean human reads can be directly used as input for:
 
 ## 🧪 Testing
 
-Test the pipeline installation with a minimal dataset:
+### Minimal Test
+
+Test the pipeline installation with a minimal synthetic dataset:
 
 ```bash
-nextflow run tylergross97/nextflow_xengsort -profile test,docker
+nextflow run tylergross97/nextflow_xengsort -profile test_minimal,docker
 ```
 
 This runs with:
-- Pre-configured test data (3 small samples)
-- Reduced memory requirements
+- Pre-configured synthetic test data (3 small samples: human, mouse, mixed)
+- Reduced memory requirements (2-4 GB)
 - ~5 minute runtime
-- Outputs to `results_test/` directory
+- Outputs to `results_test_minimal/` directory
+
+### Full Test
+
+Test with real PDX WES data (requires downloading data first):
+
+```bash
+# Download test data (optional - you need to provide your own WES data)
+cd test_full/data/full
+bash download_data.sh
+
+# Run full test
+nextflow run tylergross97/nextflow_xengsort -profile test_full,docker
+```
+
+This runs with:
+- Real-world PDX WES data (2 samples)
+- Production-level memory requirements (16-32 GB)
+- ~30-60 minute runtime (depending on data size)
+- Outputs to `results_test_full/` directory
 
 ## ⚙️ Parameters
 
@@ -160,7 +181,7 @@ This runs with:
 
 ### Profiles
 
-Choose a container platform:
+Choose a container platform and optional test profile:
 
 ```bash
 # Docker (recommended for local systems)
@@ -169,8 +190,11 @@ Choose a container platform:
 # Singularity (recommended for HPC)
 -profile singularity
 
-# Test with minimal data
--profile test,docker
+# Test with minimal synthetic data
+-profile test_minimal,docker
+
+# Test with full PDX WES data
+-profile test_full,docker
 ```
 
 ## 💻 Usage Examples
