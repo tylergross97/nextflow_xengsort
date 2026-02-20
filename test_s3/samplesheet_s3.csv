@@ -1,4 +1,4 @@
-sample,fastq_1,fastq_2
+sample,fastq1,fastq2
 sample1_human,s3://nf-core-awsmegatests/rnaseq/input/GSE110004/SRR6357070_1.fastq.gz,s3://nf-core-awsmegatests/rnaseq/input/GSE110004/SRR6357070_2.fastq.gz
 sample2_mouse,s3://nf-core-awsmegatests/rnaseq/input/GSE110004/SRR6357071_1.fastq.gz,s3://nf-core-awsmegatests/rnaseq/input/GSE110004/SRR6357071_2.fastq.gz
 sample3_mixed,s3://nf-core-awsmegatests/rnaseq/input/GSE110004/SRR6357072_1.fastq.gz,s3://nf-core-awsmegatests/rnaseq/input/GSE110004/SRR6357072_2.fastq.gz
