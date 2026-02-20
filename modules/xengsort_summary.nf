@@ -1,4 +1,5 @@
 process XENGSORT_SUMMARY {
+    container "ubuntu:22.04"
     publishDir "${params.outdir_base}/xengsort", mode: 'copy'
     
     input:

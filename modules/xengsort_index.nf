@@ -10,13 +10,13 @@ process XENGSORT_INDEX {
     path "xengsort_index.*", emit: index_files
 
     script:
+    def args = task.ext.args ?: '-n 4500000000 -k 25'
     """
     xengsort index \\
         --index xengsort_index \\
         --host ${mouse_fasta} \\
         --graft ${human_fasta} \\
-        -n 4500000000 \\
-        -k 25
+        ${args}
      """
 
     // Add a stub block for minimal test
