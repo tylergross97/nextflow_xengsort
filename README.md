@@ -152,7 +152,10 @@ This runs with:
 Test with real PDX WES data from the PDM database:
 
 ```bash
-# Run full test - must provide reference genome paths
+# Run full test using default iGenomes references (recommended)
+nextflow run tylergross97/nextflow_xengsort -profile test_full,docker
+
+# Or override with custom reference paths
 nextflow run tylergross97/nextflow_xengsort \
     -profile test_full,docker \
     --hg38_fasta s3://your-bucket/GRCh38.fa \
@@ -162,12 +165,14 @@ nextflow run tylergross97/nextflow_xengsort \
 This runs with:
 - Real-world PDX WES data (2 samples from PDM database)
 - FASTQ data automatically fetched via URLs (no manual download needed)
-- **Reference genomes must be provided** (not bundled due to large file sizes)
+- **Default reference genomes from AWS iGenomes** (s3://ngi-igenomes)
+  - GRCh38 (NCBI build)
+  - mm10 (UCSC build) - note: NSG-specific features may require custom reference
 - Production-level memory requirements (16-32 GB)
 - ~30-60 minute runtime (depending on download speed and data size)
 - Outputs to `results_test_full/` directory
 
-> **Note**: Reference genomes are not included in the test profile due to their large size. You must provide paths to your own GRCh38 (human) and mm10/NSG (mouse) reference genomes via the `--hg38_fasta` and `--nsg_fasta` parameters.
+> **Note**: The `test_full` profile uses reference genomes from the public AWS iGenomes bucket by default. These are automatically accessible in cloud environments (AWS, Seqera Platform). For NSG-specific PDX models, consider using the NSG-adapted reference genome (see Reference Genomes section) by overriding with `--nsg_fasta`.
 
 ## ⚙️ Parameters
 
