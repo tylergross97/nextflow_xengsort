@@ -152,16 +152,22 @@ This runs with:
 Test with real PDX WES data from the PDM database:
 
 ```bash
-# Run full test - data is automatically downloaded from PDM database
-nextflow run tylergross97/nextflow_xengsort -profile test_full,docker
+# Run full test - must provide reference genome paths
+nextflow run tylergross97/nextflow_xengsort \
+    -profile test_full,docker \
+    --hg38_fasta s3://your-bucket/GRCh38.fa \
+    --nsg_fasta s3://your-bucket/mm10_nsg.fa
 ```
 
 This runs with:
 - Real-world PDX WES data (2 samples from PDM database)
-- Data automatically fetched via URLs (no manual download needed)
+- FASTQ data automatically fetched via URLs (no manual download needed)
+- **Reference genomes must be provided** (not bundled due to large file sizes)
 - Production-level memory requirements (16-32 GB)
 - ~30-60 minute runtime (depending on download speed and data size)
 - Outputs to `results_test_full/` directory
+
+> **Note**: Reference genomes are not included in the test profile due to their large size. You must provide paths to your own GRCh38 (human) and mm10/NSG (mouse) reference genomes via the `--hg38_fasta` and `--nsg_fasta` parameters.
 
 ## ⚙️ Parameters
 
