@@ -55,10 +55,10 @@ Create a comma-separated file with three columns:
 | Column | Description |
 |--------|-------------|
 | `sample` | Unique sample identifier |
-| `fastq1` | Path to R1 FASTQ file (gzipped) |
-| `fastq2` | Path to R2 FASTQ file (gzipped) |
+| `fastq1` | Path or URL to R1 FASTQ file (gzipped) |
+| `fastq2` | Path or URL to R2 FASTQ file (gzipped) |
 
-**Example:**
+**Example with local files:**
 ```csv
 sample,fastq1,fastq2
 PDX_001,/data/PDX_001_R1.fastq.gz,/data/PDX_001_R2.fastq.gz
@@ -66,7 +66,14 @@ PDX_002,/data/PDX_002_R1.fastq.gz,/data/PDX_002_R2.fastq.gz
 PDX_003,/data/PDX_003_R1.fastq.gz,/data/PDX_003_R2.fastq.gz
 ```
 
-> **Note**: Files must be paired-end Illumina reads in gzipped FASTQ format
+**Example with URLs:**
+```csv
+sample,fastq1,fastq2
+PDX_001,https://example.com/data/PDX_001_R1.fastq.gz,https://example.com/data/PDX_001_R2.fastq.gz
+PDX_002,s3://bucket/PDX_002_R1.fastq.gz,s3://bucket/PDX_002_R2.fastq.gz
+```
+
+> **Note**: Files must be paired-end Illumina reads in gzipped FASTQ format. Both local paths and URLs (http/https/s3/ftp) are supported.
 
 ### 2. Reference Genomes
 
@@ -142,21 +149,18 @@ This runs with:
 
 ### Full Test
 
-Test with real PDX WES data (requires downloading data first):
+Test with real PDX WES data from the PDM database:
 
 ```bash
-# Download test data (optional - you need to provide your own WES data)
-cd test_full/data/full
-bash download_data.sh
-
-# Run full test
+# Run full test - data is automatically downloaded from PDM database
 nextflow run tylergross97/nextflow_xengsort -profile test_full,docker
 ```
 
 This runs with:
-- Real-world PDX WES data (2 samples)
+- Real-world PDX WES data (2 samples from PDM database)
+- Data automatically fetched via URLs (no manual download needed)
 - Production-level memory requirements (16-32 GB)
-- ~30-60 minute runtime (depending on data size)
+- ~30-60 minute runtime (depending on download speed and data size)
 - Outputs to `results_test_full/` directory
 
 ## ⚙️ Parameters
