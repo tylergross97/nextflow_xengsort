@@ -1,4 +1,4 @@
 sample,fastq1,fastq2
-human,tests/data/xengsort/human_R1.fastq.gz,tests/data/xengsort/human_R2.fastq.gz
-mouse,tests/data/xengsort/mouse_R1.fastq.gz,tests/data/xengsort/mouse_R2.fastq.gz
-mixed,tests/data/xengsort/mixed_R1.fastq.gz,tests/data/xengsort/mixed_R2.fastq.gz
+human,https://raw.githubusercontent.com/tylergross97/nextflow_xengsort/main/tests/data/xengsort/human_R1.fastq.gz,https://raw.githubusercontent.com/tylergross97/nextflow_xengsort/main/tests/data/xengsort/human_R2.fastq.gz
+mouse,https://raw.githubusercontent.com/tylergross97/nextflow_xengsort/main/tests/data/xengsort/mouse_R1.fastq.gz,https://raw.githubusercontent.com/tylergross97/nextflow_xengsort/main/tests/data/xengsort/mouse_R2.fastq.gz
+mixed,https://raw.githubusercontent.com/tylergross97/nextflow_xengsort/main/tests/data/xengsort/mixed_R1.fastq.gz,https://raw.githubusercontent.com/tylergross97/nextflow_xengsort/main/tests/data/xengsort/mixed_R2.fastq.gz
