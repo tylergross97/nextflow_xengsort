@@ -55,10 +55,10 @@ Create a comma-separated file with three columns:
 | Column | Description |
 |--------|-------------|
 | `sample` | Unique sample identifier |
-| `fastq1` | Path to R1 FASTQ file (gzipped) |
-| `fastq2` | Path to R2 FASTQ file (gzipped) |
+| `fastq1` | Path or URL to R1 FASTQ file (gzipped) |
+| `fastq2` | Path or URL to R2 FASTQ file (gzipped) |
 
-**Example:**
+**Example with local files:**
 ```csv
 sample,fastq1,fastq2
 PDX_001,/data/PDX_001_R1.fastq.gz,/data/PDX_001_R2.fastq.gz
@@ -66,7 +66,14 @@ PDX_002,/data/PDX_002_R1.fastq.gz,/data/PDX_002_R2.fastq.gz
 PDX_003,/data/PDX_003_R1.fastq.gz,/data/PDX_003_R2.fastq.gz
 ```
 
-> **Note**: Files must be paired-end Illumina reads in gzipped FASTQ format
+**Example with URLs:**
+```csv
+sample,fastq1,fastq2
+PDX_001,https://example.com/data/PDX_001_R1.fastq.gz,https://example.com/data/PDX_001_R2.fastq.gz
+PDX_002,s3://bucket/PDX_002_R1.fastq.gz,s3://bucket/PDX_002_R2.fastq.gz
+```
+
+> **Note**: Files must be paired-end Illumina reads in gzipped FASTQ format. Both local paths and URLs (http/https/s3/ftp) are supported.
 
 ### 2. Reference Genomes
 
@@ -126,17 +133,46 @@ The clean human reads can be directly used as input for:
 
 ## 🧪 Testing
 
-Test the pipeline installation with a minimal dataset:
+### Minimal Test
+
+Test the pipeline installation with a minimal synthetic dataset:
 
 ```bash
-nextflow run tylergross97/nextflow_xengsort -profile test,docker
+nextflow run tylergross97/nextflow_xengsort -profile test_minimal,docker
 ```
 
 This runs with:
-- Pre-configured test data (3 small samples)
-- Reduced memory requirements
+- Pre-configured synthetic test data (3 small samples: human, mouse, mixed)
+- Reduced memory requirements (2-4 GB)
 - ~5 minute runtime
-- Outputs to `results_test/` directory
+- Outputs to `results_test_minimal/` directory
+
+### Full Test
+
+Test with real PDX WES data from the PDM database:
+
+```bash
+# Run full test using default iGenomes references (recommended)
+nextflow run tylergross97/nextflow_xengsort -profile test_full,docker
+
+# Or override with custom reference paths
+nextflow run tylergross97/nextflow_xengsort \
+    -profile test_full,docker \
+    --hg38_fasta s3://your-bucket/GRCh38.fa \
+    --nsg_fasta s3://your-bucket/mm10_nsg.fa
+```
+
+This runs with:
+- Real-world PDX WES data (2 samples from PDM database)
+- FASTQ data automatically fetched via URLs (no manual download needed)
+- **Default reference genomes from AWS iGenomes** (s3://ngi-igenomes)
+  - GRCh38 (NCBI build)
+  - mm10 (UCSC build) - note: NSG-specific features may require custom reference
+- Production-level memory requirements (16-32 GB)
+- ~30-60 minute runtime (depending on download speed and data size)
+- Outputs to `results_test_full/` directory
+
+> **Note**: The `test_full` profile uses reference genomes from the public AWS iGenomes bucket by default. These are automatically accessible in cloud environments (AWS, Seqera Platform). For NSG-specific PDX models, consider using the NSG-adapted reference genome (see Reference Genomes section) by overriding with `--nsg_fasta`.
 
 ## ⚙️ Parameters
 
@@ -160,7 +196,7 @@ This runs with:
 
 ### Profiles
 
-Choose a container platform:
+Choose a container platform and optional test profile:
 
 ```bash
 # Docker (recommended for local systems)
@@ -169,8 +205,11 @@ Choose a container platform:
 # Singularity (recommended for HPC)
 -profile singularity
 
-# Test with minimal data
--profile test,docker
+# Test with minimal synthetic data
+-profile test_minimal,docker
+
+# Test with full PDX WES data
+-profile test_full,docker
 ```
 
 ## 💻 Usage Examples

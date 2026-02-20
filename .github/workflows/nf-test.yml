@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - full_test
   pull_request:
     branches:
       - main
@@ -16,10 +17,10 @@ jobs:
         NXF_VER:
           - "25.04.6"
         TEST_FILE:
-          - tests/modules/fastp.nf.test
-          - tests/modules/xengsort_classify.nf.test
-          - tests/modules/xengsort_index.nf.test
-          - tests/modules/xengsort_summary.nf.test
+          - test_minimal/modules/fastp.nf.test
+          - test_minimal/modules/xengsort_classify.nf.test
+          - test_minimal/modules/xengsort_index.nf.test
+          - test_minimal/modules/xengsort_summary.nf.test
 
     steps:
       - name: Check out pipeline code
@@ -39,4 +40,4 @@ jobs:
       - name: Run nf-test
         run: |
           mkdir -p reports
-          nf-test test ${{ matrix.TEST_FILE }} --profile test,docker --verbose --tap reports/test-results-${{ strategy.job-index }}.tap
+          nf-test test ${{ matrix.TEST_FILE }} --profile test_minimal,docker --verbose --tap reports/test-results-${{ strategy.job-index }}.tap

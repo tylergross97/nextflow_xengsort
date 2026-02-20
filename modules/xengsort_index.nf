@@ -3,8 +3,8 @@ process XENGSORT_INDEX {
     publishDir params.outdir_xengsort, mode: 'copy'
 
     input:
-    path human_fasta
-    path mouse_fasta
+    path human_fasta, stageAs: 'human_reference.fa'
+    path mouse_fasta, stageAs: 'mouse_reference.fa'
 
     output:
     path "xengsort_index.*", emit: index_files

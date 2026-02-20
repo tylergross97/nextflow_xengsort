@@ -61,7 +61,7 @@ workflow {
 
     XENGSORT_SUMMARY(
         XENGSORT_CLASSIFY.out.classification
-            .map { meta, classification_file -> classification_file }
+            .map { _meta, classification_file -> classification_file }
             .collect()
     )
 
